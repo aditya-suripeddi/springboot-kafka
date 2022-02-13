@@ -7,13 +7,13 @@ The code can be used as a seed to experiment / play around with kafka.
 
 ### Next Step
 
-Use docker compose to make simplify setup
+Use docker compose to simplify setting up
 
 
 ### Setup and Running
 
    1.   Downloaded scala-2.12 binary from:
-          https://kafka.apache.org/downloads and extract them
+          https://kafka.apache.org/downloads and extract it
  
 
    2. Start zookeeper and kafka 
@@ -32,11 +32,11 @@ Use docker compose to make simplify setup
    ```
 
    3. Either import the producer and consumer project into IDE and run them. You can also 
-      use mvn to package and run the jar.
+      use maven to package the producer and consumer project and then run the jars
 
 
-   4. Import the postman collection into postman which requests producer to publish a 
-      message and the consumer reads them.
+   4. Import the postman collection using which you can make REST API call to producer
+      to publish message to kafka which is ready by consumer
 
 
 ## Code Contents
@@ -48,14 +48,14 @@ to publish text messages as json payload
            
 ![](producer-flow.png)
 
-There are three consumers in apache-kafka-consumer demo projects that read messages 
+There are three consumers in apache-kafka-consumer-demo project that read messages 
 published to BookTopic and MessageTopic:
 
 ![](consumer-flow.png)
 
 
 
-###Screenshot of Output
+### Screenshot of Output
 
 ![](output-screenshot.gif)
 

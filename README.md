@@ -22,12 +22,12 @@ Use docker compose to simplify setting up
        #  zookeper is a dependency for kafka
        #  so run this first
        
-   /path/to/kafka $ bin/zookeeper-server-start.sh config/zookeeper.properties 
+   /path/to/kafka$$ bin/zookeeper-server-start.sh config/zookeeper.properties 
  
  
       # start kafka server:
      
-   /path/to/kafka $ bin/kafka-server-start.sh config/server.properties 
+   /path/to/kafka$$ bin/kafka-server-start.sh config/server.properties 
 
    ```
 
@@ -41,14 +41,14 @@ Use docker compose to simplify setting up
 
 ## Code Contents
 
-The project apache-kafka-producer-demo has code for a controller that supports `/publish` and `/publish/{path-param}`
-endpoints. The `/publish` endpoint is used to publish book objects as json payload and `/publish/{path-param}` is used
+The <em>apache-kafka-producer-demo</em> project supports two endpoints -`/publish` and `/publish/{path-param}`
+The `/publish` endpoint is used to publish book objects with json request payload and `/publish/{path-param}` is used
 to publish text messages as json payload
  
            
 ![](producer-flow.png)
 
-There are three consumers in apache-kafka-consumer-demo project that read messages 
+There are <b>3 consumers</b> in <em>apache-kafka-consumer-demo</em> project that read messages 
 published to BookTopic and MessageTopic:
 
 ![](consumer-flow.png)

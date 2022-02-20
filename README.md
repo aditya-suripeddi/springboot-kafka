@@ -8,6 +8,7 @@ The code can be used as a seed to experiment / play around with kafka.
 ### Next Step
 
  - [x] Use docker compose to simplify setting up
+ - [ ] write tests
 
 ### Setup and Running
 

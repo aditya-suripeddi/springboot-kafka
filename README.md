@@ -7,35 +7,39 @@ The code can be used as a seed to experiment / play around with kafka.
 
 ### Next Step
 
-Use docker compose to simplify setting up
-
+ - [x] Use docker compose to simplify setting up
 
 ### Setup and Running
 
-   1.   Downloaded scala-2.12 binary from:
-          https://kafka.apache.org/downloads and extract it
- 
+   1. Install docker
 
    2. Start zookeeper and kafka 
    
-   ```
-       #  zookeper is a dependency for kafka
-       #  so run this first
-       
-   /path/to/kafka$$ bin/zookeeper-server-start.sh config/zookeeper.properties 
- 
- 
-      # start kafka server:
-     
-   /path/to/kafka$$ bin/kafka-server-start.sh config/server.properties 
-
-   ```
-
-   3. Either import the producer and consumer project into IDE and run them. You can also 
-      use maven to package the producer and consumer project and then run the jars
+      ```bash   
+        # clone and go to root directory of project
+        $ git clone https://github.com/aditya-suripeddi/springboot-kafka.git
+        $ cd /path/to/springboot-kafka
+      
+        /path/to/springboot-kafka$ docker-compose up
+       ```
 
 
-   4. Import the postman collection using which you can make REST API call to producer
+   3. To run <em>apache-kafka-consumer-demo</em> and <em>apache-kafka-producer-demo</em> you can use IDEs.
+
+      If you prefer to run them from terminal without launching an IDE.
+   
+      ```bash
+      
+      # open a terminal 
+      /path/to/springboot-kafka$ cd apache-kafka-consumer-demo
+      /path/to/springboot-kafka/apache-kafka-consumer-demo$ mvn clean package && java -jar target/*.jar
+      
+      # open another tab in the terminal
+      /path/to/springboot-kafka$ cd apache-kafka-producer-demo
+      /path/to/springboot-kafka/apache-kafka-consumer-demo$ mvn clean package && java -jar target/*.jar
+      ```
+   
+   5. Import the postman collection using which you can make REST API call to producer
       to publish message to kafka which is ready by consumer
 
 
@@ -57,7 +61,10 @@ published to BookTopic and MessageTopic:
 
 ### Screenshot of Output
 
-![](output-screenshot.gif)
+On making requests to publish endpoints from postman, the logs of <em>apache-kafka-consumer-demo</em> shows
+following output:
+
+![](output-screenshot.png)
 
 
 
@@ -72,3 +79,5 @@ published to BookTopic and MessageTopic:
 4. [JsonDeserializer for Consumer | StackOverflow](https://stackoverflow.com/questions/54690518/spring-kafka-jsondesirialization-messageconversionexception-failed-to-resolve-cl)
 
 5. [Intro Apache Kafka with Spring | Baeldung](https://www.baeldung.com/spring-kafka)
+
+6. [techtter/springboot-kafka-docker](https://github.com/techtter/springboot-kafka-docker/) 

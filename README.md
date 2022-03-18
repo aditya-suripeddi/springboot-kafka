@@ -1,8 +1,7 @@
 # Apache Kafka producer and consumer with spring boot
 
-The repository helps newbies to get started developing with kafka using spring-kafka library and spring boot.
-The code can be used as a seed to experiment / play around with kafka.
-
+The aim of this repository is to get started developing with kafka using spring-kafka library and spring boot.
+The code is taken from references mentioned below and can be used as a seed to experiment / play around with kafka.
 
 
 ### Next Step
